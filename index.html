@@ -8,7 +8,44 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>Ola</h1>
+  <header>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Playstation_logo_colour.svg/1200px-Playstation_logo_colour.svg.png" alt="Logo Playstation" width="40" height="30">
+        </a>
+        <div class="d-flex gap-5">
+          <a href="https://www.playstation.com/pt-br" target="_blank">Acesse o site oficial</a>
+          <a href="https://www.playstation.com/pt-br/ps-plus" target="_blank">Catálogo de Jogos</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="d-flex vh-100 justify-content-center align-items-center flex-column w-50 m-auto">
+    <h1 class="text-center">Bem vindo</h1>
+    <p class="text-center">Faça o cadastro e descubra os melhores jogos do Playstation</p>
+    <form action="#">
+      <label for="inputNome" class="form-label">Nome completo</label>
+      <input type="text" class="form-control" id="inputNome">
+      <label for="inputCpf" class="form-label">CPF</label>
+      <input type="text" class="form-control" id="inputCpf" placeholder="000.000.000-00">
+      <label for="inputEmail" class="form-label">E-mail</label>
+      <input type="email" class="form-control" id="inputEmail" aria-describedby="mensagemEmail" placeholder="emailexemplo@sony.com">
+      <div id="mensagemEmail" class="form-text">Nós nunca vamos compartilhar seu e-mail.</div>
+      <label for="inputUsuario" class="form-label">Usuário</label>
+      <input type="text" class="form-control" id="inputUsuario" aria-describedby="mensagemUsuario">
+      <div id="mensagemUsuario" class="form-text">Usuário deve conter de 3 a 12 caracteres, letras e/ou números.</div>
+      <label for="inputSenha" class="form-label">Senha</label>
+      <input type="password" id="inputSenha" class="form-control" aria-describedby="passwordHelpBlock">
+      <div id="mensagemSenha" class="form-text"> Sua senha deve conter de 6 a 12 caracteres.</div>
+      <button type="submit" class="btn btn-primary w-100 mt-3">Realizar Cadastro</button>
+      
+    </form>
+  </main>
+  <footer class="bg-body-tertiary p-3 mt-5">
+    <div class="text-center">Desenvolvido por Breno Pavanelli dos Santos &copy</div>
+  </footer>
+  
   
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
