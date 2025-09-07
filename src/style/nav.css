@@ -1,0 +1,22 @@
+/* :root {
+    --cor-primaria: #02000D;
+    --cor-secundaria: #354F60;
+    --cor-terciaria: #F2F2F2;
+} */
+
+.navbar {
+    background-color: var(--cor-primaria);
+}
+
+.nav-links {
+    text-decoration: none;
+    color: var(--cor-terciaria);
+    font-weight: 100;
+    font-size: 1.2rem;
+}
+
+.nav-links a:hover {
+    font-weight: 500;
+    padding: 0.2rem;
+    border-bottom: 2px solid var(--cor-terciaria);
+}

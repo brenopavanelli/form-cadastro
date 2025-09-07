@@ -1,0 +1,7 @@
+.assinatura {
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    width: 100%;
+}
