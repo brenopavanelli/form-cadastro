@@ -1,4 +1,4 @@
-import FormatarCpf from "./FormatarCpf.js"
+import FormataCpf from "./FormataCpf.js"
 
 export default class ValidaCpf {
   static CPF_LENGTH = 11;
@@ -23,7 +23,7 @@ export default class ValidaCpf {
     return rest < 2 ? 0 : 11 - rest;
   }
 
-  getDigits(code) {
+   static getDigits(code) {
     let cpf = ValidaCpf.#cpfOnlyNumbers(code).slice(0, -2);
     let firstDigit = ValidaCpf.#computeDigit(cpf, ValidaCpf.FACTOR_FIRST_DIGIT);
     let secondDigit = ValidaCpf.#computeDigit(cpf + firstDigit, ValidaCpf.FACTOR_SECOND_DIGIT);
@@ -31,14 +31,11 @@ export default class ValidaCpf {
     return `${firstDigit}${secondDigit}`;
   }
 
-  validar(cpf) {
-    cpf = FormatarCpf.formatar(cpf);
+  static validar(cpf) {
+    cpf = FormataCpf.formatar(cpf);
     if (cpf.length !== 14) return false;
-    console.log(cpf.getDigits(cpf) === cpf.slice(-2));
+    console.log(ValidaCpf.getDigits(cpf) === cpf.slice(-2));
   }
 
 }
 
-ValidaCpf.validar("123.456.789-09")
-ValidaCpf.validar("12345678909")
-ValidaCpf.validar("47713926844")
