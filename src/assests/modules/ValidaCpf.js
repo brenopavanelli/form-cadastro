@@ -34,7 +34,7 @@ export default class ValidaCpf {
   static validar(cpf) {
     cpf = FormataCpf.formatar(cpf);
     if (cpf.length !== 14) return false;
-    console.log(ValidaCpf.getDigits(cpf) === cpf.slice(-2));
+    return ValidaCpf.getDigits(cpf) === cpf.slice(-2);
   }
 
 }
