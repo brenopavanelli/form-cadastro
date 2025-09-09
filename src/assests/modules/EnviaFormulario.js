@@ -13,5 +13,11 @@ export default class EnviaFormulario {
     console.log(ValidaEmail.validar(Formulario.email));
     console.log(ValidaUsuario.validar(Formulario.usuario));
     console.log(ValidaSenha.validar(Formulario.senha));
+
+    if (ValidaNome.validar(Formulario.nome) && ValidaCpf.validar(Formulario.cpf) && ValidaEmail.validar(Formulario.email) && ValidaUsuario.validar(Formulario.usuario) && ValidaSenha.validar(Formulario.senha))  {
+      alert('Formulário enviado com sucesso!');
+    } else {
+      alert('Formulário inválido!');
+    }
   }
 }
