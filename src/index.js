@@ -4,7 +4,6 @@
 // Exibir um alerta caso o formulário seja enviado com algum erro nos dados
 import EnviaFormulario from "./assests/modules/EnviaFormulario.js"
 
-
 const subimitButton = document.querySelector('.realizar-cadastro');
 
 subimitButton.addEventListener('click', (event) => {

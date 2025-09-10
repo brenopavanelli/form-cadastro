@@ -28,4 +28,5 @@ export default class Formulario {
     this.#usuarioInput.value = '';
     this.#senhaInput.value = '';
   }
+
 }

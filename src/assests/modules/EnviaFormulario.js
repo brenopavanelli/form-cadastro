@@ -16,8 +16,10 @@ export default class EnviaFormulario {
 
     if (ValidaNome.validar(Formulario.nome) && ValidaCpf.validar(Formulario.cpf) && ValidaEmail.validar(Formulario.email) && ValidaUsuario.validar(Formulario.usuario) && ValidaSenha.validar(Formulario.senha))  {
       alert('Formulário enviado com sucesso!');
+      Formulario.limpar();
     } else {
-      alert('Formulário inválido!');
+      alert('Erro ao enviar formulário!')
     }
   }
+  
 }
