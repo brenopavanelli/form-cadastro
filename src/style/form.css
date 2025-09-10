@@ -1,0 +1,7 @@
+.hidden {
+    display: none;
+}
+
+.form-error:hover {
+    border: 3px solid rgba(180, 37, 37, 0.599);
+}

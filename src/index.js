@@ -1,11 +1,26 @@
-// Ao clicar no botao de submit, o formulário não deve ser enviado caso haja algum campo inválido
-// Exibir mensagens de erro abaixo dos campos inválidos
-// Exibir confirmação de sucesso caso o formulário seja enviado com todos os campos válidos
-// Exibir um alerta caso o formulário seja enviado com algum erro nos dados
 import EnviaFormulario from "./assests/modules/EnviaFormulario.js"
+import ValidaNome from "./assests/modules/ValidaNome.js";
+import ValidaCpf from "./assests/modules/ValidaCpf.js";
+import ValidaEmail from "./assests/modules/ValidaEmail.js";
+import ValidaUsuario from "./assests/modules/ValidaUsuario.js";
+import ValidaSenha from "./assests/modules/ValidaSenha.js";
+
+const inputNome = document.getElementById('inputNome');
+const mensagemErroNome = document.getElementById('mensagemErroNome');
+inputNome.addEventListener('blur', () => {
+    if (!ValidaNome.validar(inputNome.value)) {
+        mensagemErroNome.classList.remove('hidden');
+        mensagemErroNome.classList.add('text-danger');
+        inputNome.classList.add('form-error');
+    } else {
+        mensagemErroNome.classList.add('hidden');
+        inputNome.classList.remove('form-error');
+    }
+});
+
+
 
 const subimitButton = document.querySelector('.realizar-cadastro');
-
 subimitButton.addEventListener('click', (event) => {
   event.preventDefault();
   EnviaFormulario.enviar();
