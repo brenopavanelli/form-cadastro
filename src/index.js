@@ -31,7 +31,21 @@ inputCpf.addEventListener('blur', () => {
     }
 });
 
-
+const inputEmail = document.getElementById('inputEmail');
+const mensagemErroEmail = document.getElementById('mensagemErroEmail');
+const mensagemEmail = document.getElementById('mensagemEmail');
+inputEmail.addEventListener('blur', () => {
+    if (!ValidaEmail.validar(inputEmail.value)) {
+        mensagemErroEmail.classList.remove('hidden');
+        mensagemErroEmail.classList.add('text-danger');
+        inputEmail.classList.add('form-error');
+        mensagemEmail.classList.add('hidden');
+    } else {
+        mensagemErroEmail.classList.add('hidden');
+        inputEmail.classList.remove('form-error');
+        mensagemEmail.classList.remove('hidden');
+    }
+});
 
 const subimitButton = document.querySelector('.realizar-cadastro');
 subimitButton.addEventListener('click', (event) => {
