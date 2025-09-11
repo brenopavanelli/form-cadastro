@@ -1,3 +1,14 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.form-label {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
 .hidden {
     display: none;
 }
