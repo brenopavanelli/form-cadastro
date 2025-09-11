@@ -47,6 +47,20 @@ inputEmail.addEventListener('blur', () => {
     }
 });
 
+const inputUsuario = document.getElementById('inputUsuario');
+const mensagemErroUsuario = document.getElementById('mensagemErroUsuario');
+inputUsuario.addEventListener('blur', () => {
+    if (!ValidaUsuario.validar(inputUsuario.value)) {
+        mensagemErroUsuario.classList.remove('hidden');
+        mensagemErroUsuario.classList.add('text-danger');
+        inputUsuario.classList.add('form-error');
+    } else {
+        mensagemErroUsuario.classList.add('hidden');
+        inputUsuario.classList.remove('form-error');
+    }
+});
+
+
 const subimitButton = document.querySelector('.realizar-cadastro');
 subimitButton.addEventListener('click', (event) => {
   event.preventDefault();
