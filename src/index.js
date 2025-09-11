@@ -18,6 +18,19 @@ inputNome.addEventListener('blur', () => {
     }
 });
 
+const inputCpf = document.getElementById('inputCpf');
+const mensagemErroCpf = document.getElementById('mensagemErroCpf');
+inputCpf.addEventListener('blur', () => {
+    if (!ValidaCpf.validar(inputCpf.value)) {
+        mensagemErroCpf.classList.remove('hidden');
+        mensagemErroCpf.classList.add('text-danger');
+        inputCpf.classList.add('form-error');
+    } else {
+        mensagemErroCpf.classList.add('hidden');
+        inputCpf.classList.remove('form-error');
+    }
+});
+
 
 
 const subimitButton = document.querySelector('.realizar-cadastro');
