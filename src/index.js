@@ -60,6 +60,19 @@ inputUsuario.addEventListener('blur', () => {
     }
 });
 
+const inputSenha = document.getElementById('inputSenha');
+const mensagemErroSenha = document.getElementById('mensagemErroSenha');
+inputSenha.addEventListener('blur', () => {
+    if (!ValidaSenha.validar(inputSenha.value)) {
+        mensagemErroSenha.classList.remove('hidden');        
+        mensagemErroSenha.classList.add('text-danger');
+        inputSenha.classList.add('form-error');
+    } else {
+        mensagemErroSenha.classList.add('hidden');
+        inputSenha.classList.remove('form-error');
+    }
+});
+
 
 const subimitButton = document.querySelector('.realizar-cadastro');
 subimitButton.addEventListener('click', (event) => {
